@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <import resource="Engine-beans.xml"/>
+
+    <bean id="Tesla" class="com.enigma.bean.Car">
+        <constructor-arg name="carName" type="java.lang.String" value="Tesla"/>
+        <constructor-arg name="engine" ref="electricalEngine"/>
+    </bean>
+</beans>
